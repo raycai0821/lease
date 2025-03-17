@@ -75,6 +75,7 @@ public class RoomController {
         roomInfoLambdaQueryWrapper.eq(RoomInfo::getApartmentId, id);
         roomInfoLambdaQueryWrapper.eq(RoomInfo::getIsRelease, ReleaseStatus.RELEASED);
         List<RoomInfo> list = service.list(roomInfoLambdaQueryWrapper);
+        System.out.println("22222");
         return Result.ok(list);
     }
 
